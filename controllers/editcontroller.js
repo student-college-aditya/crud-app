@@ -3,7 +3,7 @@ const StudentModel = require("../models/StudentSchema.js");
 const editcontroller=async(req,res)=>{
     
 try{
-const record= await StudentModel.findById({'_id': req.params._id})
+const record= await StudentModel.findById( req.params._id)
     if(record){
 res.render('edit', {'record': record})
 }else{
